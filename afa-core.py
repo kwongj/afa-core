@@ -41,8 +41,8 @@ def check_fasta(f):
 parser = argparse.ArgumentParser(
 	formatter_class=RawTextHelpFormatter,
 	description='Generates lists of core/non-core sites from a multi-FASTA alignment for ClonalFrameML\n',
-	usage='\n  %(prog)s [--out invariant.fa] FASTA')
-parser.add_argument('fasta', metavar='FASTA', nargs=1, help='original multi-FASTA alignment file')
+	usage='\n  %(prog)s [--pre cfml] FASTA')
+parser.add_argument('fasta', metavar='FASTA', nargs=1, help='multi-FASTA alignment file')
 parser.add_argument('--pre', metavar='PREFIX', default='cfml', help='specify output prefix for files (default="cfml")')
 parser.add_argument('--version', action='version', version='%(prog)s v0.1')
 args = parser.parse_args()
